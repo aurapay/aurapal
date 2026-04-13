@@ -16,9 +16,6 @@ export default function AppLayout({
 				</Link>
 				<div>
 					<p className="app-sidebar__section">Workspace</p>
-					<p className="helper-text">
-						One shell for queue work, approvals, billing, and policy-aware execution.
-					</p>
 				</div>
 				<nav aria-label="Workspace navigation">
 					{appNavLinks.map((link) => (
@@ -27,25 +24,27 @@ export default function AppLayout({
 						</Link>
 					))}
 				</nav>
-				<div className="panel panel--hero">
-					<p className="eyebrow">Workspace state</p>
-					<p className="metric-value">Controlled</p>
-					<p className="metric-label">
-						2 approvals pending, 14 items queued, 3 items ready to reconcile.
-					</p>
+				<div className="sidebar-status">
+					<p className="sidebar-status__label">Agent status</p>
+					<div className="sidebar-status__row">
+						<span className="status status--success">Active</span>
+						<span className="sidebar-status__detail">3 agents running</span>
+					</div>
+					<div className="sidebar-status__row">
+						<span className="status status--warning">2 pending</span>
+						<span className="sidebar-status__detail">Awaiting approval</span>
+					</div>
 				</div>
 			</aside>
 			<div className="app-main">
 				<header className="app-topbar">
 					<div>
-						<p className="eyebrow">Product shell</p>
-						<h1 className="app-topbar__title">Operations console for office workflows</h1>
-						<p className="helper-text">Dense, traceable, and built to scan quickly.</p>
+						<h1 className="app-topbar__title">Dashboard</h1>
 					</div>
 					<div className="app-topbar__actions">
-						<span className="chip chip--success">Audit on</span>
-						<Link href="/book-demo" className="button button--ghost">
-							Book demo
+						<span className="chip chip--success">All systems normal</span>
+						<Link href="/settings" className="button button--ghost">
+							Settings
 						</Link>
 					</div>
 				</header>

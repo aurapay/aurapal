@@ -5,13 +5,12 @@ export default function ResetPasswordPage() {
 		<article className="auth-card">
 			<div className="auth-card__header">
 				<div>
-					<p className="eyebrow">Reset password</p>
-					<h2 className="section-title">Recover access safely</h2>
+					<p className="eyebrow">Account recovery</p>
+					<h2 className="section-title">Reset your password</h2>
 					<p className="helper-text">
-						Request a reset link for the account tied to your workspace session.
+						Enter your work email and we'll send you a link to reset your password.
 					</p>
 				</div>
-				<span className="chip chip--warning">Recovery</span>
 			</div>
 			<form className="form-stack">
 				<div className="field">
@@ -26,10 +25,6 @@ export default function ResetPasswordPage() {
 						Back to sign in
 					</Link>
 				</div>
-				<p className="helper-text">
-					The reset route is prepared now so the future auth wiring can slot in without changing the
-					layout.
-				</p>
 			</form>
 		</article>
 	);

@@ -7,9 +7,7 @@ export default function LoginPage() {
 				<div>
 					<p className="eyebrow">Welcome back</p>
 					<h2 className="section-title">Sign in to your account</h2>
-					<p className="helper-text">
-						Access your workspace, agents, and workflow dashboard.
-					</p>
+					<p className="helper-text">Access your workspace, agents, and workflow dashboard.</p>
 				</div>
 			</div>
 			<form className="form-stack">

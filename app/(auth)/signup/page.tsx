@@ -5,18 +5,18 @@ export default function SignupPage() {
 		<article className="auth-card">
 			<div className="auth-card__header">
 				<div>
-					<p className="eyebrow">Create account</p>
-					<h2 className="section-title">Start a trial workspace</h2>
+					<p className="eyebrow">Get started</p>
+					<h2 className="section-title">Start your free 14-day trial</h2>
 					<p className="helper-text">
-						Create the account, create the workspace, and bring approvals under one roof.
+						Set up your workspace and deploy your first AI agent in minutes. No credit card
+						required.
 					</p>
 				</div>
-				<span className="chip chip--blue">Trial path</span>
 			</div>
 			<form className="form-stack">
 				<div className="field">
 					<label htmlFor="signup-company">Company name</label>
-					<input id="signup-company" type="text" placeholder="Acme Operations" />
+					<input id="signup-company" type="text" placeholder="Acme Corp" />
 				</div>
 				<div className="field">
 					<label htmlFor="signup-email">Work email</label>
@@ -27,28 +27,26 @@ export default function SignupPage() {
 					<input id="signup-password" type="password" placeholder="Create a password" />
 				</div>
 				<div className="field">
-					<label htmlFor="signup-role">Primary role</label>
-					<select id="signup-role" defaultValue="">
+					<label htmlFor="signup-department">Your department</label>
+					<select id="signup-department" defaultValue="">
 						<option value="" disabled>
-							Choose a role
+							Choose your department
 						</option>
-						<option value="operator">Operator</option>
-						<option value="approver">Approver</option>
-						<option value="admin">Admin</option>
+						<option value="finance">Finance / Accounting</option>
+						<option value="hr">People / HR</option>
+						<option value="ops">Operations</option>
+						<option value="it">IT / Procurement</option>
+						<option value="executive">Executive team</option>
+						<option value="other">Other</option>
 					</select>
 				</div>
-				<div className="form-actions">
-					<button type="button" className="button button--primary">
-						Create workspace
-					</button>
-					<Link href="/login" className="button button--ghost">
-						Sign in instead
-					</Link>
-				</div>
-				<p className="helper-text">
-					This screen defines the onboarding path even before the shared auth service is wired in.
-				</p>
+				<button type="button" className="button button--primary">
+					Create workspace
+				</button>
 			</form>
+			<p className="auth-switch">
+				Already have an account? <Link href="/login">Sign in</Link>
+			</p>
 		</article>
 	);
 }

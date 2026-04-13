@@ -36,7 +36,8 @@ export default function PricingPage() {
 							Simple pricing that scales with your team.
 						</h1>
 						<p className="section-copy">
-							Start with a 14-day free trial. No credit card required. Upgrade when your agents prove their value.
+							Start with a 14-day free trial. No credit card required. Upgrade when your agents
+							prove their value.
 						</p>
 					</div>
 					<div className="pricing-grid">
@@ -77,27 +78,45 @@ export default function PricingPage() {
 					<div className="faq-grid">
 						<article className="faq-item">
 							<h3 className="faq-item__q">What counts as an agent run?</h3>
-							<p className="faq-item__a">One complete workflow execution — e.g., processing an invoice from intake to approval routing. Multi-step workflows count as one run.</p>
+							<p className="faq-item__a">
+								One complete workflow execution — e.g., processing an invoice from intake to
+								approval routing. Multi-step workflows count as one run.
+							</p>
 						</article>
 						<article className="faq-item">
 							<h3 className="faq-item__q">Can I change plans later?</h3>
-							<p className="faq-item__a">Yes. Upgrade or downgrade at any time. Changes take effect at your next billing cycle. No penalties.</p>
+							<p className="faq-item__a">
+								Yes. Upgrade or downgrade at any time. Changes take effect at your next billing
+								cycle. No penalties.
+							</p>
 						</article>
 						<article className="faq-item">
 							<h3 className="faq-item__q">Is there a free trial?</h3>
-							<p className="faq-item__a">14-day free trial on Starter and Business plans. No credit card required to start. Full access to all features in your plan.</p>
+							<p className="faq-item__a">
+								14-day free trial on Starter and Business plans. No credit card required to start.
+								Full access to all features in your plan.
+							</p>
 						</article>
 						<article className="faq-item">
 							<h3 className="faq-item__q">What integrations are included?</h3>
-							<p className="faq-item__a">Starter includes email and calendar. Business and Enterprise include all 30+ integrations including accounting, HR, and recruiting tools.</p>
+							<p className="faq-item__a">
+								Starter includes email and calendar. Business and Enterprise include all 30+
+								integrations including accounting, HR, and recruiting tools.
+							</p>
 						</article>
 						<article className="faq-item">
 							<h3 className="faq-item__q">How long does setup take?</h3>
-							<p className="faq-item__a">Most teams are live within 15 minutes. Connect your tools, set your policies in plain English, and agents start working immediately.</p>
+							<p className="faq-item__a">
+								Most teams are live within 15 minutes. Connect your tools, set your policies in
+								plain English, and agents start working immediately.
+							</p>
 						</article>
 						<article className="faq-item">
 							<h3 className="faq-item__q">Do agents make decisions without humans?</h3>
-							<p className="faq-item__a">Agents recommend. Humans decide. Every sensitive action requires explicit approval. You set the rules for what needs human judgment.</p>
+							<p className="faq-item__a">
+								Agents recommend. Humans decide. Every sensitive action requires explicit approval.
+								You set the rules for what needs human judgment.
+							</p>
 						</article>
 					</div>
 				</section>

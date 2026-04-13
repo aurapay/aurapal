@@ -2,9 +2,21 @@ import Link from "next/link";
 import { publicNavLinks, trustSignals } from "@/lib/site-data";
 
 const complianceBadges = [
-	{ title: "SOC 2 Type II", status: "Certified", copy: "Independently audited annually. Controls verified by a Big 4 firm." },
-	{ title: "GDPR", status: "Compliant", copy: "Full data subject rights support. EU data residency available." },
-	{ title: "HIPAA", status: "Available", copy: "BAA available for healthcare customers on Enterprise plans." },
+	{
+		title: "SOC 2 Type II",
+		status: "Certified",
+		copy: "Independently audited annually. Controls verified by a Big 4 firm.",
+	},
+	{
+		title: "GDPR",
+		status: "Compliant",
+		copy: "Full data subject rights support. EU data residency available.",
+	},
+	{
+		title: "HIPAA",
+		status: "Available",
+		copy: "BAA available for healthcare customers on Enterprise plans.",
+	},
 ];
 
 const securityFeatures = [
@@ -66,13 +78,11 @@ export default function SecurityPage() {
 							<span className="hero-eyebrow__dot" />
 							SOC 2 Type II Certified
 						</p>
-						<h1 className="headline">
-							Security that earns the trust of your compliance team.
-						</h1>
+						<h1 className="headline">Security that earns the trust of your compliance team.</h1>
 						<p className="lede">
 							MyAuraPal is built for enterprises that take security seriously. Every agent operates
-							within strict boundaries, every action is auditable, and humans stay in control
-							of every sensitive decision.
+							within strict boundaries, every action is auditable, and humans stay in control of
+							every sensitive decision.
 						</p>
 						<div className="cta-row">
 							<Link href="/book-demo" className="button button--primary button--lg">
@@ -112,9 +122,7 @@ export default function SecurityPage() {
 				<section className="section">
 					<div className="section-heading section-heading--center">
 						<p className="eyebrow">Security architecture</p>
-						<h2 className="section-title">
-							Enterprise controls at every layer of the stack.
-						</h2>
+						<h2 className="section-title">Enterprise controls at every layer of the stack.</h2>
 						<p className="section-copy">
 							From agent permissions to data storage, security is built into the architecture — not
 							bolted on after the fact.
@@ -157,9 +165,7 @@ export default function SecurityPage() {
 			<div className="shell">
 				<div className="cta-band">
 					<p className="cta-band__eyebrow">Enterprise ready</p>
-					<h2 className="section-title">
-						Need a detailed security review?
-					</h2>
+					<h2 className="section-title">Need a detailed security review?</h2>
 					<p className="section-copy">
 						Our team will walk through architecture, compliance documentation, and custom deployment
 						options for your organization.

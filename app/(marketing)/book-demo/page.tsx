@@ -86,7 +86,9 @@ export default function BookDemoPage() {
 								<div className="field">
 									<label htmlFor="demo-team">Team size</label>
 									<select id="demo-team" defaultValue="">
-										<option value="" disabled>Choose a range</option>
+										<option value="" disabled>
+											Choose a range
+										</option>
 										<option value="1-20">1 – 20</option>
 										<option value="21-100">21 – 100</option>
 										<option value="101-500">101 – 500</option>
@@ -96,7 +98,9 @@ export default function BookDemoPage() {
 								<div className="field">
 									<label htmlFor="demo-department">Department</label>
 									<select id="demo-department" defaultValue="">
-										<option value="" disabled>Choose a department</option>
+										<option value="" disabled>
+											Choose a department
+										</option>
 										<option value="finance">Finance / Accounting</option>
 										<option value="hr">People / HR</option>
 										<option value="ops">Operations</option>

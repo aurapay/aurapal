@@ -43,13 +43,11 @@ export default function MarketingPage() {
 							<span className="hero-eyebrow__dot" />
 							Now available for finance, HR, and operations teams
 						</p>
-						<h1 className="headline">
-							AI agents that do the work your team keeps putting off.
-						</h1>
+						<h1 className="headline">AI agents that do the work your team keeps putting off.</h1>
 						<p className="lede">
 							MyAuraPal deploys purpose-built AI agents for invoicing, HR onboarding, recruiting,
-							scheduling, and expense management. They read documents, extract data, enforce policies,
-							and route approvals — so your team stops doing it manually.
+							scheduling, and expense management. They read documents, extract data, enforce
+							policies, and route approvals — so your team stops doing it manually.
 						</p>
 						<div className="cta-row">
 							<Link href="/signup" className="button button--primary button--lg">
@@ -93,8 +91,8 @@ export default function MarketingPage() {
 							Six agents. Dozens of workflows. Zero manual data entry.
 						</h2>
 						<p className="section-copy">
-							Each agent is purpose-built for a specific domain — trained on your policies, connected
-							to your tools, and supervised by your team. They don't guess. They execute.
+							Each agent is purpose-built for a specific domain — trained on your policies,
+							connected to your tools, and supervised by your team. They don't guess. They execute.
 						</p>
 					</div>
 					<div className="agent-grid">
@@ -157,7 +155,9 @@ export default function MarketingPage() {
 							</div>
 						))}
 						<div className="integration-chip integration-chip--more">
-							<span className="integration-chip__name">+{integrationPartners.length - 15} more</span>
+							<span className="integration-chip__name">
+								+{integrationPartners.length - 15} more
+							</span>
 							<span className="integration-chip__category">Coming soon</span>
 						</div>
 					</div>
@@ -169,9 +169,7 @@ export default function MarketingPage() {
 				<section className="section">
 					<div className="section-heading section-heading--center">
 						<p className="eyebrow">Use cases</p>
-						<h2 className="section-title">
-							Built for the teams that keep your company running.
-						</h2>
+						<h2 className="section-title">Built for the teams that keep your company running.</h2>
 						<p className="section-copy">
 							Finance, people ops, and executive teams save thousands of hours per year with agents
 							that handle their most repetitive workflows.
@@ -232,9 +230,7 @@ export default function MarketingPage() {
 			<div className="shell">
 				<div className="cta-band">
 					<p className="cta-band__eyebrow">Ready to automate?</p>
-					<h2 className="section-title">
-						Stop burning hours on work that agents can handle.
-					</h2>
+					<h2 className="section-title">Stop burning hours on work that agents can handle.</h2>
 					<p className="section-copy">
 						Join the teams already saving 85% of their manual operational time. Start your free
 						14-day trial — no credit card required.

@@ -1216,6 +1216,414 @@ svg {
 	font-size: 0.9rem;
 }
 
+/* ─── Section CTA ─── */
+
+.section-cta {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+/* ─── Logo Bar Label ─── */
+
+.logo-bar-label {
+	margin: 0;
+	padding-top: 2rem;
+	text-align: center;
+	color: var(--text-secondary);
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+/* ─── CTA Band Eyebrow ─── */
+
+.cta-band__eyebrow {
+	margin: 0 0 0.6rem;
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--accent);
+	font-weight: 800;
+}
+
+/* ─── Integration Grid ─── */
+
+.integration-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.75rem;
+}
+
+.integration-chip {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	padding: 1rem 1.2rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	background: var(--surface);
+	transition:
+		border-color 150ms,
+		background 150ms;
+}
+
+.integration-chip:hover {
+	border-color: var(--accent);
+	background: var(--accent-soft);
+}
+
+.integration-chip--more {
+	border-style: dashed;
+	background: var(--surface-hover);
+}
+
+.integration-chip__name {
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.integration-chip__category {
+	color: var(--text-secondary);
+	font-size: 0.78rem;
+	font-weight: 600;
+}
+
+/* ─── FAQ Grid ─── */
+
+.faq-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
+.faq-item {
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	background: var(--surface);
+}
+
+.faq-item__q {
+	margin: 0 0 0.5rem;
+	font-family: var(--font-display), "Sora", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+.faq-item__a {
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	line-height: 1.55;
+}
+
+/* ─── Demo Layout ─── */
+
+.demo-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: start;
+}
+
+.demo-copy {
+	padding-top: 1rem;
+}
+
+.demo-checklist {
+	margin: 1.5rem 0 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.6rem;
+}
+
+.demo-checklist li {
+	position: relative;
+	padding-left: 1.4rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+.demo-checklist li::before {
+	content: "✓";
+	position: absolute;
+	left: 0;
+	color: var(--accent);
+	font-weight: 800;
+	font-size: 0.85rem;
+}
+
+.demo-social-proof {
+	display: flex;
+	gap: 2rem;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--border);
+}
+
+.demo-stat__value {
+	display: block;
+	font-family: var(--font-display), "Sora", sans-serif;
+	font-size: 2rem;
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	color: var(--accent);
+}
+
+.demo-stat__label {
+	display: block;
+	color: var(--text-secondary);
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+/* ─── Solutions ─── */
+
+.solution-section {
+	padding: 3rem 0;
+	border-bottom: 1px solid var(--border);
+}
+
+.solution-section:last-of-type {
+	border-bottom: none;
+}
+
+.solution-header {
+	max-width: 40rem;
+	margin-bottom: 2rem;
+}
+
+.solution-agents {
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.solution-content {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 2rem;
+}
+
+.solution-stats {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1px;
+	background: var(--border);
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+	border: 1px solid var(--border);
+	align-self: start;
+}
+
+.solution-stat {
+	padding: 1.2rem 1.5rem;
+	background: var(--surface);
+}
+
+.solution-stat__value {
+	display: block;
+	font-family: var(--font-display), "Sora", sans-serif;
+	font-size: 1.8rem;
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	color: var(--accent);
+}
+
+.solution-stat__label {
+	display: block;
+	color: var(--text-secondary);
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin-top: 0.1rem;
+}
+
+.solution-workflows {
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	background: var(--surface);
+}
+
+.solution-workflows__title {
+	margin: 0 0 1rem;
+	font-family: var(--font-display), "Sora", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+.solution-workflows__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.6rem;
+}
+
+.solution-workflows__list li {
+	position: relative;
+	padding-left: 1.4rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+.solution-workflows__list li::before {
+	content: "→";
+	position: absolute;
+	left: 0;
+	color: var(--accent);
+	font-weight: 700;
+}
+
+/* ─── Customer Cards ─── */
+
+.customer-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
+.customer-card {
+	padding: 2rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	background: var(--surface);
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+.customer-card__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.customer-card__company {
+	margin: 0;
+	font-family: var(--font-display), "Sora", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.customer-card__meta {
+	margin: 0.15rem 0 0;
+	color: var(--text-secondary);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.customer-card__quote {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--text);
+	font-style: italic;
+}
+
+.customer-card__author {
+	display: flex;
+	flex-direction: column;
+	gap: 0.1rem;
+}
+
+.customer-card__name {
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.customer-card__role {
+	color: var(--text-secondary);
+	font-size: 0.8rem;
+}
+
+.customer-card__stats {
+	display: flex;
+	gap: 1.5rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
+	margin-top: auto;
+}
+
+.customer-stat__value {
+	display: block;
+	font-family: var(--font-display), "Sora", sans-serif;
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	color: var(--accent);
+}
+
+.customer-stat__label {
+	display: block;
+	color: var(--text-secondary);
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+/* ─── Auth Switch Link ─── */
+
+.auth-switch {
+	margin: 1rem 0 0;
+	text-align: center;
+	color: var(--text-secondary);
+	font-size: 0.875rem;
+}
+
+.auth-switch a {
+	color: var(--accent);
+	font-weight: 700;
+}
+
+.auth-switch a:hover {
+	text-decoration: underline;
+}
+
+/* ─── Sidebar Status ─── */
+
+.sidebar-status {
+	margin-top: auto;
+	padding: 1rem;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--border);
+	background: var(--surface-hover);
+}
+
+.sidebar-status__label {
+	margin: 0 0 0.5rem;
+	color: var(--text-secondary);
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 800;
+}
+
+.sidebar-status__row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 0.35rem;
+}
+
+.sidebar-status__detail {
+	color: var(--text-secondary);
+	font-size: 0.8rem;
+}
+
 /* ─── Footer ─── */
 
 .footer {
@@ -1226,8 +1634,24 @@ svg {
 
 .footer-grid {
 	display: grid;
-	grid-template-columns: 1.5fr repeat(4, 1fr);
+	grid-template-columns: 1.5fr repeat(5, 1fr);
 	gap: 2rem;
+}
+
+.footer-column--brand {
+	padding-right: 1rem;
+}
+
+.footer-bottom {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--border);
+}
+
+.footer-legal {
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: 0.8rem;
 }
 
 .footer-column {
@@ -1275,8 +1699,22 @@ svg {
 	.usecase-grid,
 	.pricing-grid,
 	.console-grid,
-	.feature-grid {
+	.feature-grid,
+	.faq-grid,
+	.customer-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.integration-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.solution-content {
+		grid-template-columns: 1fr;
+	}
+
+	.demo-layout {
+		grid-template-columns: 1fr;
 	}
 
 	.metrics-row {
@@ -1288,7 +1726,7 @@ svg {
 	}
 
 	.footer-grid {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		gap: 2rem;
 	}
 
@@ -1339,7 +1777,17 @@ svg {
 	.pricing-grid,
 	.console-grid,
 	.feature-grid,
+	.faq-grid,
+	.customer-grid,
 	.footer-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.integration-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.form-row {
 		grid-template-columns: 1fr;
 	}
 
