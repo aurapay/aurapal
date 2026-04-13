@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
 	agents,
 	heroMetrics,
@@ -9,243 +10,319 @@ import {
 	trustSignals,
 	useCases,
 } from "@/lib/site-data";
-import Image from "next/image";
+
+const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
+const sectionClass = "pt-20";
+const sectionHeadingCenterClass = "mx-auto mb-10 max-w-[44rem] text-center";
+const sectionTitleClass =
+	"font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em]";
+const sectionCopyClass = "mt-3 text-base leading-6 text-text-secondary";
+const heroButtonPrimaryClass =
+	"inline-flex items-center justify-center rounded-sm border border-transparent bg-accent px-6 py-2 text-xs font-bold text-white transition duration-150 hover:-translate-y-px hover:bg-accent-hover hover:shadow-md focus-visible:outline-none";
+const heroButtonGhostClass =
+	"inline-flex items-center justify-center rounded-sm border border-border-dark bg-transparent px-6 py-2 text-xs font-bold text-text-dark-secondary transition duration-150 hover:-translate-y-px hover:bg-white/5 hover:text-text-dark hover:shadow-md focus-visible:outline-none";
+const sectionButtonSecondaryClass =
+	"inline-flex items-center justify-center rounded-xs border border-transparent bg-text px-3 py-1 text-sm font-bold text-bg transition duration-150 hover:-translate-y-px hover:opacity-90 hover:shadow-md focus-visible:outline-none";
 
 export default function MarketingPage() {
 	return (
-		<>
-			{/* Dark Hero */}
-			<div className="hero-block">
-				<div className="shell">
-					<header className="topbar">
-						<Link href="/" className="site-brand" aria-label="AuraPal">
-							<Image src="/logo.png" alt="AuraPal" width={40} height={40} />
-							<span>AuraPal</span>
-						</Link>
-						<nav className="nav" aria-label="Primary">
-							{publicNavLinks.map((link) => (
-								<Link key={link.href} href={link.href} className="nav-link">
-									{link.label}
+		<main className="pb-20">
+			<div className="relative overflow-hidden bg-bg-dark text-text-dark min-h-screen">
+				<div className="pointer-events-none absolute left-1/2 top-[-40%] h-[80%] w-[120%] -translate-x-1/2 bg-[radial-gradient(ellipse,_rgba(22,163,74,0.12)_0%,_transparent_60%)]" />
+				<div className="relative z-10">
+					<div className={shellClass}>
+						<header className="flex flex-col gap-3 py-4 lg:flex-row lg:items-center lg:justify-between">
+							<Link
+								href="/"
+								className="inline-flex items-center gap-3 font-display text-[1.05rem] font-bold tracking-[-0.03em] text-text-dark"
+								aria-label="AuraPal"
+							>
+								<Image src="/logo.png" alt="AuraPal" width={40} height={40} className="h-10 w-10" />
+								<span>AuraPal</span>
+							</Link>
+							<nav
+								className="flex flex-wrap items-center gap-2 rounded-full border border-border-dark bg-white/5 p-1"
+								aria-label="Primary"
+							>
+								{publicNavLinks.map((link) => (
+									<Link
+										key={link.href}
+										href={link.href}
+										className="rounded-full px-3.5 py-1.5 text-sm font-semibold text-text-dark-secondary transition-colors hover:bg-white/5 hover:text-text-dark"
+									>
+										{link.label}
+									</Link>
+								))}
+							</nav>
+							<div className="flex flex-wrap items-center gap-3">
+								<Link href="/login" className={heroButtonGhostClass}>
+									Sign in
 								</Link>
-							))}
-						</nav>
-						<div className="nav-actions">
-							<Link href="/login" className="button button--ghost">
-								Sign in
-							</Link>
-							<Link href="/signup" className="button button--primary">
-								Start free trial
-							</Link>
-						</div>
-					</header>
+								<Link href="/signup" className={heroButtonPrimaryClass}>
+									Start free trial
+								</Link>
+							</div>
+						</header>
 
-					<div className="hero">
-						<p className="hero-eyebrow">
-							<span className="hero-eyebrow__dot" />
-							Now available for finance, HR, and operations teams
-						</p>
-						<h1 className="headline">AI agents that do the work your team keeps putting off.</h1>
-						<p className="lede">
-							MyAuraPal deploys purpose-built AI agents for invoicing, HR onboarding, recruiting,
-							scheduling, and expense management. They read documents, extract data, enforce
-							policies, and route approvals — so your team stops doing it manually.
-						</p>
-						<div className="cta-row">
-							<Link href="/signup" className="button button--primary button--lg">
-								Start free trial
-							</Link>
-							<Link href="/book-demo" className="button button--ghost button--lg">
-								Book a demo
-							</Link>
-						</div>
-						<div className="metrics-row">
-							{heroMetrics.map((metric) => (
-								<div key={metric.label} className="metric">
-									<span className="metric-value">{metric.value}</span>
-									<span className="metric-label">{metric.label}</span>
-									<p className="metric-detail">{metric.detail}</p>
-								</div>
-							))}
+						<div className="pb-20 pt-20 text-center">
+							<p className="inline-flex items-center gap-2 rounded-full border border-border-dark bg-white/5 px-4 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-accent">
+								<span className="h-1.5 w-1.5 rounded-full bg-accent" />
+								Now available for finance, HR, and operations teams
+							</p>
+							<h1 className="mx-auto mt-6 max-w-[18ch] font-display text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
+								AI agents that do the work your team keeps putting off.
+							</h1>
+							<p className="mx-auto mt-6 max-w-[42rem] text-[1.15rem] leading-7 text-text-dark-secondary">
+								MyAuraPal deploys purpose-built AI agents for invoicing, HR onboarding, recruiting,
+								scheduling, and expense management. They read documents, extract data, enforce
+								policies, and route approvals — so your team stops doing it manually.
+							</p>
+							<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+								<Link href="/signup" className={heroButtonPrimaryClass}>
+									Start free trial
+								</Link>
+								<Link href="/book-demo" className={heroButtonGhostClass}>
+									Book a demo
+								</Link>
+							</div>
+							<div className="mt-14 flex flex-col gap-px overflow-hidden rounded-md bg-border-dark lg:flex-row">
+								{heroMetrics.map((metric) => (
+									<div key={metric.label} className="flex-1 bg-bg-dark-soft px-7 py-6 text-left">
+										<span className="block font-display text-2xl font-extrabold tracking-[-0.04em] text-text-dark">
+											{metric.value}
+										</span>
+										<span className="mt-1 block text-sm font-semibold text-text-dark-secondary">
+											{metric.label}
+										</span>
+										<p className="mt-2 text-sm leading-6 text-text-dark-secondary/80">
+											{metric.detail}
+										</p>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			{/* Logo Bar */}
-			<div className="shell">
-				<p className="logo-bar-label">Trusted by teams at</p>
-				<div className="logo-bar">
+			<div className={shellClass}>
+				<p className="pt-12 text-center text-[0.8rem] font-bold uppercase tracking-[0.1em] text-text-secondary">
+					Trusted by teams at
+				</p>
+				<div className="mt-6 flex flex-wrap items-center justify-center gap-6 border-b border-border pb-12 sm:gap-10">
 					{logoNames.map((name) => (
-						<span key={name} className="logo-bar__item">
+						<span
+							key={name}
+							className="font-display text-base font-bold tracking-[-0.02em] text-text-secondary opacity-50"
+						>
 							{name}
 						</span>
 					))}
 				</div>
 			</div>
 
-			{/* AI Agents */}
-			<div className="shell">
-				<section className="section" id="agents">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">AI Agents</p>
-						<h2 className="section-title">
+			<div className={shellClass}>
+				<section className={sectionClass} id="agents">
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							AI Agents
+						</p>
+						<h2 className={sectionTitleClass}>
 							Six agents. Dozens of workflows. Zero manual data entry.
 						</h2>
-						<p className="section-copy">
+						<p className={sectionCopyClass}>
 							Each agent is purpose-built for a specific domain — trained on your policies,
 							connected to your tools, and supervised by your team. They don't guess. They execute.
 						</p>
 					</div>
-					<div className="agent-grid">
+					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
 						{agents.map((agent) => (
-							<article key={agent.title} className="agent-card">
-								<div className="agent-card__icon">{agent.icon.slice(0, 2).toUpperCase()}</div>
-								<h3 className="agent-card__title">{agent.title}</h3>
-								<p className="agent-card__copy">{agent.copy}</p>
-								<span className="agent-card__stat">{agent.stat}</span>
+							<article
+								key={agent.title}
+								className="flex flex-col gap-3 bg-surface p-7 transition-colors hover:bg-surface-hover"
+							>
+								<div className="flex h-10 w-10 items-center justify-center rounded-xs bg-accent-subtle text-xs font-extrabold text-accent">
+									{agent.icon.slice(0, 2).toUpperCase()}
+								</div>
+								<h3 className="m-0 font-display text-[1.15rem] font-bold tracking-[-0.02em]">
+									{agent.title}
+								</h3>
+								<p className="m-0 text-sm leading-6 text-text-secondary">{agent.copy}</p>
+								<span className="mt-auto inline-flex w-fit items-center gap-1 rounded-full bg-accent-subtle px-3 py-1 text-[0.78rem] font-bold text-accent">
+									{agent.stat}
+								</span>
 							</article>
 						))}
 					</div>
-					<div className="section-cta">
-						<Link href="/solutions" className="button button--secondary">
+					<div className="mt-8 flex justify-center">
+						<Link href="/solutions" className={sectionButtonSecondaryClass}>
 							See all solutions
 						</Link>
 					</div>
 				</section>
 			</div>
 
-			{/* How it Works */}
-			<div className="shell">
-				<section className="section" id="how-it-works">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">How it works</p>
-						<h2 className="section-title">Live in 4 steps. No engineering required.</h2>
-						<p className="section-copy">
+			<div className={shellClass}>
+				<section className={sectionClass} id="how-it-works">
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							How it works
+						</p>
+						<h2 className={sectionTitleClass}>Live in 4 steps. No engineering required.</h2>
+						<p className={sectionCopyClass}>
 							Connect your tools, define your rules in plain English, and let agents handle the
 							operational load. You stay in control of every decision.
 						</p>
 					</div>
-					<div className="steps-grid">
+					<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 						{howItWorks.map((step) => (
-							<article key={step.step} className="step-card">
-								<div className="step-card__number">{step.step}</div>
-								<h3 className="step-card__title">{step.title}</h3>
-								<p className="step-card__copy">{step.copy}</p>
+							<article key={step.step} className="rounded-lg border border-border bg-surface p-6">
+								<div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-text text-sm font-extrabold text-bg">
+									{step.step}
+								</div>
+								<h3 className="m-0 font-display text-[1.15rem] font-bold tracking-[-0.02em]">
+									{step.title}
+								</h3>
+								<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">{step.copy}</p>
 							</article>
 						))}
 					</div>
 				</section>
 			</div>
 
-			{/* Integrations */}
-			<div className="shell">
-				<section className="section">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">Integrations</p>
-						<h2 className="section-title">Connects to the tools your team already uses.</h2>
-						<p className="section-copy">
+			<div className={shellClass}>
+				<section className={sectionClass}>
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							Integrations
+						</p>
+						<h2 className={sectionTitleClass}>Connects to the tools your team already uses.</h2>
+						<p className={sectionCopyClass}>
 							30+ integrations across email, finance, HR, recruiting, project management, and more.
 							Agents pull data in and push actions out — no middleware required.
 						</p>
 					</div>
-					<div className="integration-grid">
+					<div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
 						{integrationPartners.slice(0, 15).map((partner) => (
-							<div key={partner.name} className="integration-chip">
-								<span className="integration-chip__name">{partner.name}</span>
-								<span className="integration-chip__category">{partner.category}</span>
+							<div
+								key={partner.name}
+								className="flex flex-col gap-1 rounded-sm border border-border bg-surface px-4 py-4 transition-colors hover:border-accent hover:bg-accent-subtle"
+							>
+								<span className="text-sm font-bold text-text">{partner.name}</span>
+								<span className="text-xs font-semibold text-text-secondary">
+									{partner.category}
+								</span>
 							</div>
 						))}
-						<div className="integration-chip integration-chip--more">
-							<span className="integration-chip__name">
+						<div className="flex flex-col gap-1 rounded-sm border border-dashed border-border bg-surface-hover px-4 py-4">
+							<span className="text-sm font-bold text-text">
 								+{integrationPartners.length - 15} more
 							</span>
-							<span className="integration-chip__category">Coming soon</span>
+							<span className="text-xs font-semibold text-text-secondary">Coming soon</span>
 						</div>
 					</div>
 				</section>
 			</div>
 
-			{/* Use Cases */}
-			<div className="shell">
-				<section className="section">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">Use cases</p>
-						<h2 className="section-title">Built for the teams that keep your company running.</h2>
-						<p className="section-copy">
+			<div className={shellClass}>
+				<section className={sectionClass}>
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							Use cases
+						</p>
+						<h2 className={sectionTitleClass}>
+							Built for the teams that keep your company running.
+						</h2>
+						<p className={sectionCopyClass}>
 							Finance, people ops, and executive teams save thousands of hours per year with agents
 							that handle their most repetitive workflows.
 						</p>
 					</div>
-					<div className="usecase-grid">
+					<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 						{useCases.map((useCase) => (
-							<article key={useCase.title} className="usecase-card">
-								<h3 className="usecase-card__title">{useCase.title}</h3>
-								<p className="usecase-card__copy">{useCase.copy}</p>
-								<div className="usecase-card__stats">
+							<article
+								key={useCase.title}
+								className="flex flex-col gap-4 rounded-lg border border-border bg-surface p-8"
+							>
+								<h3 className="m-0 font-display text-[1.3rem] font-bold tracking-[-0.02em]">
+									{useCase.title}
+								</h3>
+								<p className="m-0 text-sm leading-6 text-text-secondary">{useCase.copy}</p>
+								<div className="mt-auto flex gap-6 border-t border-border pt-4">
 									{useCase.stats.map((stat) => (
 										<div key={stat.label}>
-											<span className="usecase-stat__value">{stat.value}</span>
-											<span className="usecase-stat__label">{stat.label}</span>
+											<span className="block font-display text-[1.8rem] font-extrabold tracking-[-0.04em] text-accent">
+												{stat.value}
+											</span>
+											<span className="block text-xs font-semibold text-text-secondary">
+												{stat.label}
+											</span>
 										</div>
 									))}
 								</div>
 							</article>
 						))}
 					</div>
-					<div className="section-cta">
-						<Link href="/solutions" className="button button--secondary">
+					<div className="mt-8 flex justify-center">
+						<Link href="/solutions" className={sectionButtonSecondaryClass}>
 							Explore all solutions
 						</Link>
 					</div>
 				</section>
 			</div>
 
-			{/* Trust */}
-			<div className="shell">
-				<section className="section">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">Security & compliance</p>
-						<h2 className="section-title">Enterprise-grade trust, built into every agent.</h2>
-						<p className="section-copy">
+			<div className={shellClass}>
+				<section className={sectionClass}>
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							Security & compliance
+						</p>
+						<h2 className={sectionTitleClass}>Enterprise-grade trust, built into every agent.</h2>
+						<p className={sectionCopyClass}>
 							SOC 2 Type II certified. Every agent action is logged, every decision is auditable,
 							and sensitive actions always require human approval.
 						</p>
 					</div>
-					<div className="trust-grid">
+					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
 						{trustSignals.map((signal) => (
-							<article key={signal.title} className="trust-card">
-								<h3 className="trust-card__title">{signal.title}</h3>
-								<p className="trust-card__copy">{signal.copy}</p>
+							<article key={signal.title} className="flex flex-col gap-2 bg-surface p-7">
+								<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+									{signal.title}
+								</h3>
+								<p className="m-0 text-sm leading-6 text-text-secondary">{signal.copy}</p>
 							</article>
 						))}
 					</div>
-					<div className="section-cta">
-						<Link href="/security" className="button button--secondary">
+					<div className="mt-8 flex justify-center">
+						<Link href="/security" className={sectionButtonSecondaryClass}>
 							Learn about our security
 						</Link>
 					</div>
 				</section>
 			</div>
 
-			{/* Bottom CTA */}
-			<div className="shell">
-				<div className="cta-band">
-					<p className="cta-band__eyebrow">Ready to automate?</p>
-					<h2 className="section-title">Stop burning hours on work that agents can handle.</h2>
-					<p className="section-copy">
+			<div className={shellClass}>
+				<div className="mt-20 rounded-xl bg-bg-dark px-6 py-16 text-center text-text-dark shadow-lg sm:px-12">
+					<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+						Ready to automate?
+					</p>
+					<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-text-dark">
+						Stop burning hours on work that agents can handle.
+					</h2>
+					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
 						Join the teams already saving 85% of their manual operational time. Start your free
 						14-day trial — no credit card required.
 					</p>
-					<div className="cta-row">
-						<Link href="/signup" className="button button--primary button--lg">
+					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+						<Link href="/signup" className={heroButtonPrimaryClass}>
 							Start free trial
 						</Link>
-						<Link href="/book-demo" className="button button--ghost button--lg">
+						<Link href="/book-demo" className={heroButtonGhostClass}>
 							Book a demo
 						</Link>
 					</div>
 				</div>
 			</div>
-		</>
+		</main>
 	);
 }

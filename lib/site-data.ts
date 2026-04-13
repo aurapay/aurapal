@@ -260,14 +260,6 @@ export const footerColumns: FooterColumn[] = [
 			{ label: "Status", href: "#" },
 		],
 	},
-	{
-		title: "Legal",
-		links: [
-			{ label: "Privacy policy", href: "#" },
-			{ label: "Terms of service", href: "#" },
-			{ label: "Cookie policy", href: "#" },
-		],
-	},
 ];
 
 export const solutions = [

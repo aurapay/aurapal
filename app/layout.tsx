@@ -25,8 +25,10 @@ export default function RootLayout({
 	children: ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
-			<body>{children}</body>
+		<html lang="en" className={`${bodyFont.variable} ${displayFont.variable} scroll-smooth`}>
+			<body className="min-h-screen bg-bg text-text font-body antialiased selection:bg-accent/20 selection:text-text">
+				{children}
+			</body>
 		</html>
 	);
 }

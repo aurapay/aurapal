@@ -1,65 +1,110 @@
 import Link from "next/link";
+import Image from "next/image";
 import { pricingPlans, publicNavLinks } from "@/lib/site-data";
+
+const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
+const sectionClass = "pt-20";
+const sectionHeadingCenterClass = "mx-auto mb-10 max-w-[44rem] text-center";
+const sectionTitleClass =
+	"font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em]";
+const sectionCopyClass = "mt-3 text-base leading-6 text-text-secondary";
+const heroButtonPrimaryClass =
+	"inline-flex min-h-12 items-center justify-center rounded-sm border border-transparent bg-accent px-8 py-3.5 text-base font-bold text-white transition duration-150 hover:-translate-y-px hover:bg-accent-hover hover:shadow-md focus-visible:outline-none";
+const heroButtonGhostClass =
+	"inline-flex min-h-12 items-center justify-center rounded-sm border border-border-dark bg-transparent px-8 py-3.5 text-base font-bold text-text-dark-secondary transition duration-150 hover:-translate-y-px hover:bg-white/5 hover:text-text-dark hover:shadow-md focus-visible:outline-none";
+const sectionButtonGhostClass =
+	"inline-flex min-h-10 items-center justify-center rounded-xs border border-border bg-transparent px-5 py-2.5 text-sm font-bold text-text transition duration-150 hover:-translate-y-px hover:bg-black/5 hover:shadow-md focus-visible:outline-none";
+const sectionButtonPrimaryClass =
+	"inline-flex min-h-10 items-center justify-center rounded-xs border border-transparent bg-accent px-5 py-2.5 text-sm font-bold text-white transition duration-150 hover:-translate-y-px hover:bg-accent-hover hover:shadow-md focus-visible:outline-none";
 
 export default function PricingPage() {
 	return (
-		<>
-			<div className="shell">
-				<header className="topbar">
-					<Link href="/" className="site-brand" aria-label="MyAuraPal home">
-						<span className="brand-mark">MP</span>
+		<main className="pb-20">
+			<div className={shellClass}>
+				<header className="flex flex-col gap-3 border-b border-border py-4 lg:flex-row lg:items-center lg:justify-between">
+					<Link
+						href="/"
+						className="inline-flex items-center gap-3 font-display text-[1.05rem] font-bold tracking-[-0.03em]"
+						aria-label="MyAuraPal home"
+					>
+						<Image src="/logo.png" alt="MyAuraPal" width={40} height={40} className="h-10 w-10" />
 						<span>MyAuraPal</span>
 					</Link>
-					<nav className="nav" aria-label="Primary">
+					<nav
+						className="flex flex-wrap items-center gap-2 rounded-full border border-border bg-white/60 p-1"
+						aria-label="Primary"
+					>
 						{publicNavLinks.map((link) => (
-							<Link key={link.href} href={link.href} className="nav-link">
+							<Link
+								key={link.href}
+								href={link.href}
+								className="rounded-full px-3.5 py-1.5 text-sm font-semibold text-text-secondary transition-colors hover:bg-black/5 hover:text-text"
+							>
 								{link.label}
 							</Link>
 						))}
 					</nav>
-					<div className="nav-actions">
-						<Link href="/login" className="button button--ghost">
+					<div className="flex flex-wrap items-center gap-3">
+						<Link href="/login" className={sectionButtonGhostClass}>
 							Sign in
 						</Link>
-						<Link href="/signup" className="button button--primary">
+						<Link href="/signup" className={sectionButtonPrimaryClass}>
 							Start free trial
 						</Link>
 					</div>
 				</header>
 			</div>
 
-			<div className="shell">
-				<section className="section">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">Pricing</p>
-						<h1 className="section-title" style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)" }}>
+			<div className={shellClass}>
+				<section className={sectionClass}>
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							Pricing
+						</p>
+						<h1 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
 							Simple pricing that scales with your team.
 						</h1>
-						<p className="section-copy">
+						<p className={sectionCopyClass}>
 							Start with a 14-day free trial. No credit card required. Upgrade when your agents
 							prove their value.
 						</p>
 					</div>
-					<div className="pricing-grid">
+					<div className="grid gap-6 xl:grid-cols-3">
 						{pricingPlans.map((plan) => (
 							<article
 								key={plan.title}
-								className={`pricing-card ${plan.featured ? "pricing-card--featured" : ""}`}
+								className={`relative flex flex-col gap-3 rounded-lg border bg-surface p-8 ${plan.featured ? "border-accent shadow-md" : "border-border"}`}
 							>
-								<p className="pricing-card__step">{plan.title}</p>
-								<p className="pricing-card__price">
-									{plan.price}
-									{plan.period && <span className="pricing-card__period">{plan.period}</span>}
+								{plan.featured && (
+									<span className="absolute -top-3 left-6 rounded-full bg-accent px-3 py-1 text-[0.7rem] font-extrabold uppercase tracking-[0.06em] text-white">
+										Most popular
+									</span>
+								)}
+								<p className="text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-text-secondary">
+									{plan.title}
 								</p>
-								<p className="pricing-card__tag">{plan.copy}</p>
-								<ul className="pricing-card__list">
+								<p className="font-display text-[2.5rem] font-extrabold leading-none tracking-[-0.04em]">
+									{plan.price}
+									{plan.period && (
+										<span className="text-base font-medium tracking-normal text-text-secondary">
+											{plan.period}
+										</span>
+									)}
+								</p>
+								<p className="text-sm leading-6 text-text-secondary">{plan.copy}</p>
+								<ul className="mt-2 grid gap-2">
 									{plan.features.map((feature) => (
-										<li key={feature}>{feature}</li>
+										<li
+											key={feature}
+											className="relative pl-5 text-sm leading-6 text-text-secondary before:absolute before:left-0 before:top-0 before:font-extrabold before:text-accent before:content-['✓']"
+										>
+											{feature}
+										</li>
 									))}
 								</ul>
 								<Link
 									href={plan.title === "Enterprise" ? "/book-demo" : "/signup"}
-									className={`button ${plan.featured ? "button--primary" : "button--secondary"}`}
+									className={`mt-auto inline-flex min-h-11 items-center justify-center rounded-xs border px-5 py-3 text-sm font-bold transition duration-150 hover:-translate-y-px hover:shadow-md focus-visible:outline-none ${plan.featured ? "border-transparent bg-accent text-white hover:bg-accent-hover" : "border-transparent bg-text text-bg hover:opacity-90"}`}
 								>
 									{plan.cta}
 								</Link>
@@ -69,51 +114,65 @@ export default function PricingPage() {
 				</section>
 			</div>
 
-			<div className="shell">
-				<section className="section">
-					<div className="section-heading section-heading--center">
-						<p className="eyebrow">FAQ</p>
-						<h2 className="section-title">Common questions</h2>
+			<div className={shellClass}>
+				<section className={sectionClass}>
+					<div className={sectionHeadingCenterClass}>
+						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+							FAQ
+						</p>
+						<h2 className={sectionTitleClass}>Common questions</h2>
 					</div>
-					<div className="faq-grid">
-						<article className="faq-item">
-							<h3 className="faq-item__q">What counts as an agent run?</h3>
-							<p className="faq-item__a">
+					<div className="grid gap-6 md:grid-cols-2">
+						<article className="rounded-lg border border-border bg-surface p-6">
+							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+								What counts as an agent run?
+							</h3>
+							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
 								One complete workflow execution — e.g., processing an invoice from intake to
 								approval routing. Multi-step workflows count as one run.
 							</p>
 						</article>
-						<article className="faq-item">
-							<h3 className="faq-item__q">Can I change plans later?</h3>
-							<p className="faq-item__a">
+						<article className="rounded-lg border border-border bg-surface p-6">
+							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+								Can I change plans later?
+							</h3>
+							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
 								Yes. Upgrade or downgrade at any time. Changes take effect at your next billing
 								cycle. No penalties.
 							</p>
 						</article>
-						<article className="faq-item">
-							<h3 className="faq-item__q">Is there a free trial?</h3>
-							<p className="faq-item__a">
+						<article className="rounded-lg border border-border bg-surface p-6">
+							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+								Is there a free trial?
+							</h3>
+							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
 								14-day free trial on Starter and Business plans. No credit card required to start.
 								Full access to all features in your plan.
 							</p>
 						</article>
-						<article className="faq-item">
-							<h3 className="faq-item__q">What integrations are included?</h3>
-							<p className="faq-item__a">
+						<article className="rounded-lg border border-border bg-surface p-6">
+							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+								What integrations are included?
+							</h3>
+							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
 								Starter includes email and calendar. Business and Enterprise include all 30+
 								integrations including accounting, HR, and recruiting tools.
 							</p>
 						</article>
-						<article className="faq-item">
-							<h3 className="faq-item__q">How long does setup take?</h3>
-							<p className="faq-item__a">
+						<article className="rounded-lg border border-border bg-surface p-6">
+							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+								How long does setup take?
+							</h3>
+							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
 								Most teams are live within 15 minutes. Connect your tools, set your policies in
 								plain English, and agents start working immediately.
 							</p>
 						</article>
-						<article className="faq-item">
-							<h3 className="faq-item__q">Do agents make decisions without humans?</h3>
-							<p className="faq-item__a">
+						<article className="rounded-lg border border-border bg-surface p-6">
+							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
+								Do agents make decisions without humans?
+							</h3>
+							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
 								Agents recommend. Humans decide. Every sensitive action requires explicit approval.
 								You set the rules for what needs human judgment.
 							</p>
@@ -122,23 +181,27 @@ export default function PricingPage() {
 				</section>
 			</div>
 
-			<div className="shell">
-				<div className="cta-band">
-					<p className="cta-band__eyebrow">Need a custom plan?</p>
-					<h2 className="section-title">Ready to put your agents to work?</h2>
-					<p className="section-copy">
+			<div className={shellClass}>
+				<div className="mt-20 rounded-xl bg-bg-dark px-6 py-16 text-center text-text-dark shadow-lg sm:px-12">
+					<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
+						Need a custom plan?
+					</p>
+					<h2 className={sectionTitleClass + " text-text-dark"}>
+						Ready to put your agents to work?
+					</h2>
+					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
 						Start your free trial today or talk to our team about enterprise needs.
 					</p>
-					<div className="cta-row">
-						<Link href="/signup" className="button button--primary button--lg">
+					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+						<Link href="/signup" className={heroButtonPrimaryClass}>
 							Start free trial
 						</Link>
-						<Link href="/book-demo" className="button button--ghost button--lg">
+						<Link href="/book-demo" className={heroButtonGhostClass}>
 							Talk to sales
 						</Link>
 					</div>
 				</div>
 			</div>
-		</>
+		</main>
 	);
 }
