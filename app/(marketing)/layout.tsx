@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { footerColumns } from "@/lib/site-data";
+import Image from "next/image";
 
 export default function MarketingLayout({
 	children,
@@ -15,8 +16,8 @@ export default function MarketingLayout({
 					<div className="footer-grid">
 						<div className="footer-column footer-column--brand">
 							<Link href="/" className="brand">
-								<span className="brand-mark">MP</span>
-								<span>MyAuraPal</span>
+								<Image src="/logo.png" alt="AuraPal" width={40} height={40} />
+								<span>AuraPal</span>
 							</Link>
 							<p className="footer-note">
 								AI agents that automate your most repetitive corporate tasks — invoicing,

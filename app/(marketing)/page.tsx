@@ -9,6 +9,7 @@ import {
 	trustSignals,
 	useCases,
 } from "@/lib/site-data";
+import Image from "next/image";
 
 export default function MarketingPage() {
 	return (
@@ -17,9 +18,9 @@ export default function MarketingPage() {
 			<div className="hero-block">
 				<div className="shell">
 					<header className="topbar">
-						<Link href="/" className="site-brand" aria-label="MyAuraPal home">
-							<span className="brand-mark">MP</span>
-							<span>MyAuraPal</span>
+						<Link href="/" className="site-brand" aria-label="AuraPal">
+							<Image src="/logo.png" alt="AuraPal" width={40} height={40} />
+							<span>AuraPal</span>
 						</Link>
 						<nav className="nav" aria-label="Primary">
 							{publicNavLinks.map((link) => (
