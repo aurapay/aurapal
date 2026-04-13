@@ -1,0 +1,32 @@
+import type { Metadata } from "next";
+import { Manrope, Sora } from "next/font/google";
+import type { ReactNode } from "react";
+import "./globals.css";
+
+const bodyFont = Manrope({
+	subsets: ["latin"],
+	variable: "--font-body",
+});
+
+const displayFont = Sora({
+	subsets: ["latin"],
+	variable: "--font-display",
+});
+
+export const metadata: Metadata = {
+	title: "MyAuraPal | AI Agents for Office Workflows",
+	description:
+		"Deploy intelligent AI agents that automate invoicing, HR onboarding, recruiting, scheduling, and expense management. Less manual work, faster approvals, full audit trails.",
+};
+
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: ReactNode;
+}>) {
+	return (
+		<html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
+			<body>{children}</body>
+		</html>
+	);
+}
