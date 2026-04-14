@@ -16,7 +16,7 @@ const displayFont = Sora({
 export const metadata: Metadata = {
 	title: "MyAuraPal | AI Agents for Office Workflows",
 	description:
-		"Deploy intelligent AI agents that automate invoicing, HR onboarding, recruiting, scheduling, and expense management. Less manual work, faster approvals, full audit trails.",
+		"AI agents that automate finance, HR, and operations workflows with faster approvals and full audit trails.",
 };
 
 export default function RootLayout({

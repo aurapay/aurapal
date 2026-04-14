@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { agents, publicNavLinks, solutions } from "@/lib/site-data";
 
 const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
@@ -60,12 +60,11 @@ export default function SolutionsPage() {
 								Solutions by department
 							</p>
 							<h1 className="mx-auto mt-6 max-w-[18ch] font-display text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
-								AI agents built for how your team actually works.
+								AI agents for the work each team does every day.
 							</h1>
 							<p className="mx-auto mt-6 max-w-[42rem] text-[1.15rem] leading-7 text-text-dark-secondary">
-								Every department has repetitive workflows that drain hours from high-value work.
-								MyAuraPal agents are purpose-built to handle them — from invoice processing to
-								employee onboarding to executive scheduling.
+								From invoices to onboarding to scheduling, MyAuraPal handles the repetitive work
+								that slows each department down.
 							</p>
 						</div>
 					</div>
@@ -79,11 +78,10 @@ export default function SolutionsPage() {
 							AI Agents
 						</p>
 						<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
-							Meet the agents that power your operations.
+							Agents that power your operations.
 						</h2>
 						<p className="mt-3 text-base leading-6 text-text-secondary">
-							Each agent is a specialist — trained on your policies, connected to your systems, and
-							supervised by your team.
+							Each one follows your rules, connects to your systems, and stays under human review.
 						</p>
 					</div>
 					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
@@ -147,7 +145,7 @@ export default function SolutionsPage() {
 							</div>
 							<div className="rounded-lg border border-border bg-surface p-6 shadow-sm">
 								<h3 className="m-0 mb-4 font-display text-base font-bold tracking-[-0.01em]">
-									Automated workflows
+									Automated steps
 								</h3>
 								<ul className="grid gap-3">
 									{solution.workflows.map((workflow) => (
@@ -171,17 +169,17 @@ export default function SolutionsPage() {
 						See it in action
 					</p>
 					<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-text-dark">
-						Which workflows are eating your team's time?
+						Which workflows should go first?
 					</h2>
 					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
-						Book a demo and we'll show you exactly how agents handle your specific use cases.
+						Book a demo and we’ll show you where agents save the most time.
 					</p>
 					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
 						<Link href="/book-demo" className={heroButtonPrimaryClass}>
 							Book a demo
 						</Link>
 						<Link href="/pricing" className={heroButtonGhostClass}>
-							See pricing
+							View pricing
 						</Link>
 					</div>
 				</div>

@@ -55,24 +55,23 @@ export default function BookDemoPage() {
 							Book a demo
 						</p>
 						<h1 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
-							See how AI agents can automate your team's busywork.
+							See how agents cut busywork.
 						</h1>
 						<p className={sectionCopyClass}>
-							In 30 minutes, we'll show you how MyAuraPal agents handle invoicing, onboarding,
-							scheduling, and more — tailored to your team's workflows.
+							In 30 minutes, we’ll show the fastest workflows to automate.
 						</p>
 						<ul className="mt-6 grid gap-3">
 							<li className="relative pl-5 text-sm leading-6 text-text-secondary before:absolute before:left-0 before:top-0 before:font-extrabold before:text-accent before:content-['✓']">
-								Live walkthrough of agents relevant to your team
+								Walk through the agents that fit your team
 							</li>
 							<li className="relative pl-5 text-sm leading-6 text-text-secondary before:absolute before:left-0 before:top-0 before:font-extrabold before:text-accent before:content-['✓']">
-								See real workflows: invoice processing, HR onboarding, scheduling
+								See one or two workflows in action
 							</li>
 							<li className="relative pl-5 text-sm leading-6 text-text-secondary before:absolute before:left-0 before:top-0 before:font-extrabold before:text-accent before:content-['✓']">
-								Custom ROI estimate based on your team size and volume
+								Get a rough ROI estimate
 							</li>
 							<li className="relative pl-5 text-sm leading-6 text-text-secondary before:absolute before:left-0 before:top-0 before:font-extrabold before:text-accent before:content-['✓']">
-								Q&amp;A on security, compliance, and integrations
+								Ask about security and integrations
 							</li>
 						</ul>
 						<div className="mt-8 flex gap-6 border-t border-border pt-6">
@@ -81,16 +80,14 @@ export default function BookDemoPage() {
 									85%
 								</span>
 								<span className="block text-sm font-semibold text-text-secondary">
-									less manual work after deployment
+									less manual work
 								</span>
 							</div>
 							<div>
 								<span className="block font-display text-[2rem] font-extrabold tracking-[-0.04em] text-accent">
 									15 min
 								</span>
-								<span className="block text-sm font-semibold text-text-secondary">
-									average time to go live
-								</span>
+								<span className="block text-sm font-semibold text-text-secondary">to go live</span>
 							</div>
 						</div>
 					</div>
@@ -100,7 +97,7 @@ export default function BookDemoPage() {
 								Request a demo
 							</p>
 							<h2 className="font-display text-2xl font-extrabold tracking-[-0.03em]">
-								Tell us about your team
+								Tell us about your workflows
 							</h2>
 						</div>
 						<form className="space-y-4">
@@ -192,11 +189,11 @@ export default function BookDemoPage() {
 							</div>
 							<div className="grid gap-2">
 								<label htmlFor="demo-use-case" className="text-sm font-bold text-text">
-									What workflows do you want to automate?
+									What should we automate?
 								</label>
 								<textarea
 									id="demo-use-case"
-									placeholder="E.g., invoice processing, employee onboarding, meeting scheduling, expense management..."
+									placeholder="E.g., invoices, onboarding, scheduling, expenses..."
 									className="min-h-24 rounded-xs border border-border bg-surface px-4 py-3 text-text placeholder:text-text-secondary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
 								/>
 							</div>
@@ -207,7 +204,7 @@ export default function BookDemoPage() {
 								Request demo
 							</button>
 							<p className="text-sm leading-6 text-text-secondary">
-								We'll respond within one business day with available times.
+								We’ll respond within one business day.
 							</p>
 						</form>
 					</div>

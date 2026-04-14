@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import Image from "next/image";
 import { footerColumns } from "@/lib/site-data";
 
 const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
@@ -31,8 +31,7 @@ export default function MarketingLayout({
 								<span>AuraPal</span>
 							</Link>
 							<p className="max-w-sm text-sm leading-6 text-text-secondary">
-								AI agents that automate your most repetitive corporate tasks — invoicing,
-								onboarding, scheduling, and more.
+								AI agents for finance, HR, and operations teams.
 							</p>
 						</div>
 						{footerColumns.map((column) => (
@@ -67,7 +66,6 @@ export default function MarketingLayout({
 								</Link>
 							))}
 						</div>
-
 					</div>
 				</div>
 			</footer>

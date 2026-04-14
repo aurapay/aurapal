@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { customerStories, heroMetrics, publicNavLinks } from "@/lib/site-data";
 
 const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
@@ -60,11 +60,10 @@ export default function CustomersPage() {
 								Customer stories
 							</p>
 							<h1 className="mx-auto mt-6 max-w-[18ch] font-display text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
-								Teams saving thousands of hours with AI agents.
+								Teams saving hours with AI agents.
 							</h1>
 							<p className="mx-auto mt-6 max-w-[42rem] text-[1.15rem] leading-7 text-text-dark-secondary">
-								From 85-person startups to 1,200-employee enterprises, these teams replaced manual
-								busywork with intelligent automation — and never looked back.
+								From startups to enterprises, these teams replaced busywork with agents that run.
 							</p>
 							<div className="mt-14 flex flex-col gap-px overflow-hidden rounded-md bg-border-dark lg:flex-row">
 								{heroMetrics.map((metric) => (
@@ -137,11 +136,10 @@ export default function CustomersPage() {
 						Join them
 					</p>
 					<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-text-dark">
-						Ready to see what agents can do for your team?
+						See what agents can save your team.
 					</h2>
 					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
-						Start your free 14-day trial or book a demo to see MyAuraPal in action with your
-						specific workflows.
+						Start your free 14-day trial or book a demo for your workflows.
 					</p>
 					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
 						<Link href="/signup" className={heroButtonPrimaryClass}>

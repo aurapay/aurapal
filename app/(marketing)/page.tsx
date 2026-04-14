@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
 	agents,
 	heroMetrics,
@@ -67,15 +67,14 @@ export default function MarketingPage() {
 						<div className="pb-20 pt-20 text-center">
 							<p className="inline-flex items-center gap-2 rounded-full border border-border-dark bg-white/5 px-4 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-accent">
 								<span className="h-1.5 w-1.5 rounded-full bg-accent" />
-								Now available for finance, HR, and operations teams
+								For finance, HR, and ops teams
 							</p>
 							<h1 className="mx-auto mt-6 max-w-[18ch] font-display text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
-								AI agents that do the work your team keeps putting off.
+								AI agents that clear repetitive work off your team’s plate.
 							</h1>
 							<p className="mx-auto mt-6 max-w-[42rem] text-[1.15rem] leading-7 text-text-dark-secondary">
-								MyAuraPal deploys purpose-built AI agents for invoicing, HR onboarding, recruiting,
-								scheduling, and expense management. They read documents, extract data, enforce
-								policies, and route approvals — so your team stops doing it manually.
+								MyAuraPal handles invoicing, onboarding, recruiting, scheduling, and expenses so
+								your team moves faster with less manual work.
 							</p>
 							<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
 								<Link href="/signup" className={heroButtonPrimaryClass}>
@@ -125,14 +124,12 @@ export default function MarketingPage() {
 				<section className={sectionClass} id="agents">
 					<div className={sectionHeadingCenterClass}>
 						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
-							AI Agents
+							Agents
 						</p>
-						<h2 className={sectionTitleClass}>
-							Six agents. Dozens of workflows. Zero manual data entry.
-						</h2>
+						<h2 className={sectionTitleClass}>Six agents for repetitive work.</h2>
 						<p className={sectionCopyClass}>
-							Each agent is purpose-built for a specific domain — trained on your policies,
-							connected to your tools, and supervised by your team. They don't guess. They execute.
+							Each one follows your rules, connects to your tools, and shows full context before
+							anything sensitive moves.
 						</p>
 					</div>
 					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
@@ -156,7 +153,7 @@ export default function MarketingPage() {
 					</div>
 					<div className="mt-8 flex justify-center">
 						<Link href="/solutions" className={sectionButtonSecondaryClass}>
-							See all solutions
+							View solutions
 						</Link>
 					</div>
 				</section>
@@ -168,11 +165,8 @@ export default function MarketingPage() {
 						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
 							How it works
 						</p>
-						<h2 className={sectionTitleClass}>Live in 4 steps. No engineering required.</h2>
-						<p className={sectionCopyClass}>
-							Connect your tools, define your rules in plain English, and let agents handle the
-							operational load. You stay in control of every decision.
-						</p>
+						<h2 className={sectionTitleClass}>Connect. Set rules. Let agents run.</h2>
+						<p className={sectionCopyClass}>No engineering required. You keep the final say.</p>
 					</div>
 					<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 						{howItWorks.map((step) => (
@@ -196,10 +190,9 @@ export default function MarketingPage() {
 						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
 							Integrations
 						</p>
-						<h2 className={sectionTitleClass}>Connects to the tools your team already uses.</h2>
+						<h2 className={sectionTitleClass}>Works with the tools you already use.</h2>
 						<p className={sectionCopyClass}>
-							30+ integrations across email, finance, HR, recruiting, project management, and more.
-							Agents pull data in and push actions out — no middleware required.
+							Email, finance, HR, and calendar tools without middleware.
 						</p>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
@@ -230,12 +223,9 @@ export default function MarketingPage() {
 						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
 							Use cases
 						</p>
-						<h2 className={sectionTitleClass}>
-							Built for the teams that keep your company running.
-						</h2>
+						<h2 className={sectionTitleClass}>Built for the teams doing the heavy lifting.</h2>
 						<p className={sectionCopyClass}>
-							Finance, people ops, and executive teams save thousands of hours per year with agents
-							that handle their most repetitive workflows.
+							Finance, people ops, and executive teams save hours on the workflows that never stop.
 						</p>
 					</div>
 					<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -275,12 +265,11 @@ export default function MarketingPage() {
 				<section className={sectionClass}>
 					<div className={sectionHeadingCenterClass}>
 						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
-							Security & compliance
+							Security
 						</p>
-						<h2 className={sectionTitleClass}>Enterprise-grade trust, built into every agent.</h2>
+						<h2 className={sectionTitleClass}>Trust built in.</h2>
 						<p className={sectionCopyClass}>
-							SOC 2 Type II certified. Every agent action is logged, every decision is auditable,
-							and sensitive actions always require human approval.
+							Every action is logged, permissioned, and easy to review.
 						</p>
 					</div>
 					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
@@ -295,7 +284,7 @@ export default function MarketingPage() {
 					</div>
 					<div className="mt-8 flex justify-center">
 						<Link href="/security" className={sectionButtonSecondaryClass}>
-							Learn about our security
+							View security
 						</Link>
 					</div>
 				</section>
@@ -307,11 +296,11 @@ export default function MarketingPage() {
 						Ready to automate?
 					</p>
 					<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-text-dark">
-						Stop burning hours on work that agents can handle.
+						Put your agents to work.
 					</h2>
 					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
-						Join the teams already saving 85% of their manual operational time. Start your free
-						14-day trial — no credit card required.
+						Join teams already cutting manual work. Start your free 14-day trial, no credit card
+						required.
 					</p>
 					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
 						<Link href="/signup" className={heroButtonPrimaryClass}>

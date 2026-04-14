@@ -28,17 +28,17 @@ export const heroMetrics = [
 	{
 		value: "85%",
 		label: "less manual work",
-		detail: "Across invoice processing, onboarding, and scheduling tasks",
+		detail: "Invoice, onboarding, and scheduling tasks",
 	},
 	{
 		value: "12x",
 		label: "faster approvals",
-		detail: "Agents pre-check policies and route to the right approver",
+		detail: "Policies route requests to the right approver",
 	},
 	{
 		value: "$240k",
-		label: "saved per year",
-		detail: "Average enterprise savings in the first 12 months",
+		label: "saved yearly",
+		detail: "Typical enterprise savings in year one",
 	},
 ];
 
@@ -56,37 +56,37 @@ export const logoNames = [
 export const agents = [
 	{
 		title: "Invoice Agent",
-		copy: "Reads invoices from email, extracts line items, checks against purchase orders, and routes for approval — without human intervention.",
+		copy: "Reads invoices, checks POs, and routes approvals fast.",
 		icon: "receipt",
 		stat: "4.2s avg processing",
 	},
 	{
 		title: "Payments Agent",
-		copy: "Prepares payment batches, validates against approval policies, and stages disbursements with full audit trails.",
+		copy: "Validates batches and stages payments with audit trails.",
 		icon: "banknotes",
 		stat: "Zero manual entry",
 	},
 	{
 		title: "HR Onboarding Agent",
-		copy: "Creates checklists, provisions accounts, assigns equipment, and tracks every step from offer acceptance to Day 1.",
+		copy: "Sets up new hires, accounts, and Day 1 checklists.",
 		icon: "user-plus",
 		stat: "3hr → 8min onboarding",
 	},
 	{
 		title: "Recruiting Agent",
-		copy: "Screens resumes, drafts candidate summaries, schedules interviews, and keeps hiring managers in sync automatically.",
+		copy: "Screens resumes, summarizes candidates, and schedules interviews.",
 		icon: "briefcase",
 		stat: "500+ resumes/day",
 	},
 	{
 		title: "Scheduling Agent",
-		copy: "Coordinates across calendars, respects constraints, sends confirmations, and handles reschedules without back-and-forth.",
+		copy: "Coordinates calendars, confirms meetings, and handles reschedules.",
 		icon: "calendar",
 		stat: "92% first-try booking",
 	},
 	{
 		title: "Expense Agent",
-		copy: "Captures receipts, categorizes spend, flags policy violations, and prepares reimbursements for one-click approval.",
+		copy: "Captures receipts, flags issues, and prepares reimbursements.",
 		icon: "credit-card",
 		stat: "$0 in missed receipts",
 	},
@@ -96,29 +96,29 @@ export const howItWorks = [
 	{
 		step: "01",
 		title: "Connect your tools",
-		copy: "Link Gmail, Slack, QuickBooks, your HRIS, and 30+ other systems. Agents start learning your workflows immediately.",
+		copy: "Link email, HR, finance, and calendar tools in minutes.",
 	},
 	{
 		step: "02",
 		title: "Set your policies",
-		copy: "Define approval thresholds, routing rules, and escalation paths in plain English. No code required.",
+		copy: "Define approvals and routing in plain English.",
 	},
 	{
 		step: "03",
 		title: "Agents go to work",
-		copy: "Tasks flow in automatically. Agents read, extract, validate, and route — surfacing only what needs human judgment.",
+		copy: "They process tasks, flag exceptions, and route decisions.",
 	},
 	{
 		step: "04",
 		title: "Approve with confidence",
-		copy: "Every action includes full context: source documents, policy checks, extracted data, and a recommended decision.",
+		copy: "See the context, then approve with confidence.",
 	},
 ];
 
 export const useCases = [
 	{
 		title: "Finance teams",
-		copy: "Automate invoice processing, payment approvals, expense reports, and vendor management. Your agents handle the volume; your team handles the judgment calls.",
+		copy: "Automate invoices, payments, and expenses with policy checks.",
 		stats: [
 			{ value: "94%", label: "touchless invoices" },
 			{ value: "2.1 days", label: "faster close" },
@@ -126,7 +126,7 @@ export const useCases = [
 	},
 	{
 		title: "People operations",
-		copy: "From offer letters to offboarding checklists, agents manage the operational load so your team can focus on culture and strategy.",
+		copy: "Handle onboarding, offboarding, and lifecycle admin automatically.",
 		stats: [
 			{ value: "67%", label: "less admin time" },
 			{ value: "100%", label: "compliance rate" },
@@ -134,7 +134,7 @@ export const useCases = [
 	},
 	{
 		title: "Executive assistants",
-		copy: "Scheduling, travel coordination, meeting prep, and follow-ups. Agents handle the logistics while EAs handle relationships.",
+		copy: "Keep scheduling, travel, and follow-ups moving without back-and-forth.",
 		stats: [
 			{ value: "8hrs", label: "saved weekly" },
 			{ value: "0", label: "scheduling conflicts" },
@@ -145,27 +145,27 @@ export const useCases = [
 export const trustSignals = [
 	{
 		title: "SOC 2 Type II",
-		copy: "Annual independent audits verify our security controls meet enterprise standards.",
+		copy: "Audited yearly against enterprise controls.",
 	},
 	{
 		title: "End-to-end encryption",
-		copy: "Data is encrypted in transit and at rest. Agent actions never expose raw credentials.",
+		copy: "Data is encrypted in transit and at rest.",
 	},
 	{
 		title: "Full audit trail",
-		copy: "Every agent action is logged with source input, decision reasoning, and outcome.",
+		copy: "Every action is logged with source and outcome.",
 	},
 	{
 		title: "Role-based access",
-		copy: "Operators, approvers, and admins see only what they need. Granular permissions at every level.",
+		copy: "Operators, approvers, and admins see only what they need.",
 	},
 	{
 		title: "Human-in-the-loop",
-		copy: "Agents recommend. Humans decide. Sensitive actions always require explicit approval.",
+		copy: "Sensitive actions stay behind explicit approval.",
 	},
 	{
 		title: "Data residency",
-		copy: "Choose where your data lives. US, EU, and custom deployment regions for enterprise.",
+		copy: "Choose US, EU, or custom deployment regions.",
 	},
 ];
 
@@ -174,14 +174,14 @@ export const pricingPlans = [
 		title: "Starter",
 		price: "$49",
 		period: "/seat/mo",
-		copy: "For small teams automating their first workflows.",
+		copy: "For small teams automating first workflows.",
 		features: [
-			"3 AI agents included",
-			"1,000 agent runs/month",
-			"5 team members",
-			"Email + calendar integrations",
-			"Basic approval workflows",
-			"7-day audit history",
+			"3 agents",
+			"1,000 runs/mo",
+			"5 teammates",
+			"Email and calendar",
+			"Basic approvals",
+			"7-day audit log",
 		],
 		cta: "Start free trial",
 		featured: false,
@@ -190,14 +190,14 @@ export const pricingPlans = [
 		title: "Business",
 		price: "$149",
 		period: "/seat/mo",
-		copy: "For growing teams that need full operational coverage.",
+		copy: "For growing teams that need full coverage.",
 		features: [
-			"All 6 AI agents",
-			"10,000 agent runs/month",
-			"Unlimited team members",
-			"All 30+ integrations",
-			"Custom policies & rules",
-			"90-day audit history",
+			"All 6 agents",
+			"10,000 runs/mo",
+			"Unlimited teammates",
+			"30+ integrations",
+			"Custom rules",
+			"90-day audit log",
 			"Priority support",
 		],
 		cta: "Start free trial",
@@ -207,11 +207,11 @@ export const pricingPlans = [
 		title: "Enterprise",
 		price: "Custom",
 		period: "",
-		copy: "For organizations with complex compliance and scale needs.",
+		copy: "For teams with complex compliance and scale needs.",
 		features: [
-			"Unlimited agents & runs",
-			"Custom agent training",
-			"SSO & SCIM provisioning",
+			"Unlimited agents and runs",
+			"Custom training",
+			"SSO and SCIM",
 			"Dedicated success manager",
 			"Custom data residency",
 			"Unlimited audit history",
@@ -266,73 +266,69 @@ export const solutions = [
 	{
 		id: "finance",
 		title: "Finance teams",
-		headline: "Close the books faster with agents that never sleep.",
-		copy: "Invoice processing, payment approvals, expense reports, and vendor management — handled automatically with full audit trails and policy compliance.",
+		headline: "Close the books faster.",
+		copy: "Automate invoices, payments, and expenses with built-in policy checks.",
 		agents: ["Invoice Agent", "Payments Agent", "Expense Agent"],
 		stats: [
 			{ value: "94%", label: "touchless invoices" },
-			{ value: "2.1 days", label: "faster month-end close" },
-			{ value: "$240k", label: "saved per year" },
+			{ value: "2.1 days", label: "faster close" },
+			{ value: "$240k", label: "saved yearly" },
 		],
 		workflows: [
-			"3-way invoice matching against POs and receipts",
-			"Automated payment batch preparation and approval routing",
-			"Receipt capture, categorization, and policy violation flagging",
-			"Vendor onboarding document collection and verification",
+			"Invoice matching and exception handling",
+			"Payment batch prep and approval routing",
+			"Receipt capture and policy checks",
 		],
 	},
 	{
 		id: "people-ops",
 		title: "People operations",
-		headline: "From offer letter to Day 1, on autopilot.",
-		copy: "Agents manage the operational load of onboarding, offboarding, and employee lifecycle events so your team can focus on culture and strategy.",
+		headline: "Onboard faster with less admin.",
+		copy: "Handle onboarding, offboarding, and employee changes automatically.",
 		agents: ["HR Onboarding Agent", "Recruiting Agent"],
 		stats: [
-			{ value: "67%", label: "less admin time" },
+			{ value: "67%", label: "less admin" },
 			{ value: "3hr → 8min", label: "onboarding setup" },
-			{ value: "100%", label: "compliance rate" },
+			{ value: "100%", label: "compliance" },
 		],
 		workflows: [
-			"Automated onboarding checklists with account provisioning",
-			"Resume screening with candidate summary generation",
-			"Interview scheduling across multiple calendars",
-			"Offboarding task tracking and access revocation",
+			"Onboarding checklists and account setup",
+			"Resume screening and candidate summaries",
+			"Offboarding tasks and access removal",
 		],
 	},
 	{
 		id: "exec-assistants",
 		title: "Executive assistants",
-		headline: "Handle the logistics. Focus on the relationships.",
-		copy: "Scheduling, travel coordination, meeting prep, and follow-ups. Agents handle the back-and-forth while EAs handle what matters.",
+		headline: "Keep calendars moving.",
+		copy: "Handle scheduling, travel, prep, and follow-up without back-and-forth.",
 		agents: ["Scheduling Agent"],
 		stats: [
-			{ value: "8hrs", label: "saved weekly per EA" },
+			{ value: "8hrs", label: "saved weekly" },
 			{ value: "92%", label: "first-try booking rate" },
 			{ value: "0", label: "scheduling conflicts" },
 		],
 		workflows: [
-			"Cross-calendar scheduling with constraint awareness",
-			"Meeting prep briefs with attendee context",
-			"Automated follow-up and action item tracking",
-			"Travel itinerary coordination and change management",
+			"Cross-calendar scheduling with constraints",
+			"Meeting briefs and follow-up tracking",
+			"Travel coordination and changes",
 		],
 	},
 	{
 		id: "it-procurement",
 		title: "IT & procurement",
-		headline: "Procurement workflows that enforce policy by default.",
-		copy: "Purchase requests, vendor approvals, license management, and contract renewals — routed through the right approval chains automatically.",
+		headline: "Enforce policy on every request.",
+		copy: "Route purchases, renewals, and approvals through the right chain.",
 		agents: ["Invoice Agent", "Payments Agent"],
 		stats: [
-			{ value: "75%", label: "faster procurement cycles" },
+			{ value: "75%", label: "faster procurement" },
 			{ value: "100%", label: "policy-compliant approvals" },
-			{ value: "$180k", label: "in waste eliminated" },
+			{ value: "$180k", label: "waste removed" },
 		],
 		workflows: [
-			"Purchase request intake and budget validation",
-			"Multi-level approval routing based on spend thresholds",
-			"Contract renewal tracking with auto-reminders",
-			"License usage monitoring and optimization recommendations",
+			"Purchase requests and budget checks",
+			"Multi-level approval routing",
+			"Renewal tracking and reminders",
 		],
 	},
 ];
@@ -343,7 +339,7 @@ export const customerStories = [
 		industry: "Financial Services",
 		size: "240 employees",
 		quote:
-			"We went from 6 people touching every invoice to zero. MyAuraPal's agents process 94% of our invoices without any human intervention.",
+			"We went from six people touching invoices to zero. MyAuraPal now handles 94% automatically.",
 		author: "Sarah Chen",
 		role: "VP of Finance",
 		stats: [
@@ -356,8 +352,7 @@ export const customerStories = [
 		company: "Vantage Health",
 		industry: "Healthcare",
 		size: "1,200 employees",
-		quote:
-			"Onboarding used to take our HR team 3 hours per new hire. Now the agent handles everything in under 8 minutes. We onboarded 47 people last quarter without adding headcount.",
+		quote: "Onboarding dropped from hours to minutes. We scaled without adding HR headcount.",
 		author: "Marcus Williams",
 		role: "Head of People",
 		stats: [
@@ -370,8 +365,7 @@ export const customerStories = [
 		company: "Lattice Labs",
 		industry: "Technology",
 		size: "85 employees",
-		quote:
-			"Our EA was spending half her day just coordinating schedules. The Scheduling Agent handles all of it now — zero conflicts in three months.",
+		quote: "Our EA stopped spending half the day on scheduling. Conflicts are gone.",
 		author: "James Park",
 		role: "CEO",
 		stats: [
@@ -384,8 +378,7 @@ export const customerStories = [
 		company: "Atlas Logistics",
 		industry: "Supply Chain",
 		size: "650 employees",
-		quote:
-			"We process over 2,000 invoices a month. MyAuraPal caught $42k in duplicate payments in the first week alone. The ROI was immediate.",
+		quote: "MyAuraPal caught duplicate payments in week one. The ROI was immediate.",
 		author: "Lisa Nakamura",
 		role: "CFO",
 		stats: [

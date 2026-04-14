@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { publicNavLinks, trustSignals } from "@/lib/site-data";
 
 const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
@@ -102,15 +102,13 @@ export default function SecurityPage() {
 						<div className="pb-20 pt-20 text-center">
 							<p className="inline-flex items-center gap-2 rounded-full border border-border-dark bg-white/5 px-4 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-accent">
 								<span className="h-1.5 w-1.5 rounded-full bg-accent" />
-								SOC 2 Type II Certified
+								SOC 2 Type II
 							</p>
 							<h1 className="mx-auto mt-6 max-w-[18ch] font-display text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
-								Security that earns the trust of your compliance team.
+								Security your compliance team can trust.
 							</h1>
 							<p className="mx-auto mt-6 max-w-[42rem] text-[1.15rem] leading-7 text-text-dark-secondary">
-								MyAuraPal is built for enterprises that take security seriously. Every agent
-								operates within strict boundaries, every action is auditable, and humans stay in
-								control of every sensitive decision.
+								MyAuraPal keeps agents scoped, logged, and human-approved for sensitive actions.
 							</p>
 							<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
 								<Link href="/book-demo" className={heroButtonPrimaryClass}>
@@ -132,7 +130,7 @@ export default function SecurityPage() {
 							Compliance
 						</p>
 						<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
-							Built to meet the standards your industry requires.
+							Built for compliance review.
 						</h2>
 					</div>
 					<div className="grid gap-6 md:grid-cols-3">
@@ -163,11 +161,10 @@ export default function SecurityPage() {
 							Security architecture
 						</p>
 						<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
-							Enterprise controls at every layer of the stack.
+							Controls at every layer.
 						</h2>
 						<p className="mt-3 text-base leading-6 text-text-secondary">
-							From agent permissions to data storage, security is built into the architecture — not
-							bolted on after the fact.
+							Security is built in, from permissions to storage.
 						</p>
 					</div>
 					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
@@ -190,11 +187,10 @@ export default function SecurityPage() {
 							Trust principles
 						</p>
 						<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
-							How we think about trust.
+							Trust principles.
 						</h2>
 						<p className="mt-3 text-base leading-6 text-text-secondary">
-							These are the principles that govern how every agent behaves and how every piece of
-							data is handled.
+							The rules behind every agent action.
 						</p>
 					</div>
 					<div className="grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
@@ -216,11 +212,10 @@ export default function SecurityPage() {
 						Enterprise ready
 					</p>
 					<h2 className="font-display text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-text-dark">
-						Need a detailed security review?
+						Need a security review?
 					</h2>
 					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
-						Our team will walk through architecture, compliance documentation, and custom deployment
-						options for your organization.
+						We’ll walk through architecture, compliance docs, and deployment options.
 					</p>
 					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
 						<Link href="/book-demo" className={heroButtonPrimaryClass}>

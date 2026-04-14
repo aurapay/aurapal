@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { pricingPlans, publicNavLinks } from "@/lib/site-data";
 
 const shellClass = "mx-auto max-w-[1200px] px-4 sm:px-6";
@@ -62,11 +62,10 @@ export default function PricingPage() {
 							Pricing
 						</p>
 						<h1 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
-							Simple pricing that scales with your team.
+							Pricing that grows with your team.
 						</h1>
 						<p className={sectionCopyClass}>
-							Start with a 14-day free trial. No credit card required. Upgrade when your agents
-							prove their value.
+							Start free for 14 days. Upgrade when agents prove value.
 						</p>
 					</div>
 					<div className="grid gap-6 xl:grid-cols-3">
@@ -120,7 +119,7 @@ export default function PricingPage() {
 						<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
 							FAQ
 						</p>
-						<h2 className={sectionTitleClass}>Common questions</h2>
+						<h2 className={sectionTitleClass}>Quick answers</h2>
 					</div>
 					<div className="grid gap-6 md:grid-cols-2">
 						<article className="rounded-lg border border-border bg-surface p-6">
@@ -128,8 +127,7 @@ export default function PricingPage() {
 								What counts as an agent run?
 							</h3>
 							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
-								One complete workflow execution — e.g., processing an invoice from intake to
-								approval routing. Multi-step workflows count as one run.
+								One workflow from intake to outcome. Multi-step jobs still count as one run.
 							</p>
 						</article>
 						<article className="rounded-lg border border-border bg-surface p-6">
@@ -137,8 +135,7 @@ export default function PricingPage() {
 								Can I change plans later?
 							</h3>
 							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
-								Yes. Upgrade or downgrade at any time. Changes take effect at your next billing
-								cycle. No penalties.
+								Yes. Upgrade or downgrade anytime. Changes start next billing cycle.
 							</p>
 						</article>
 						<article className="rounded-lg border border-border bg-surface p-6">
@@ -146,26 +143,7 @@ export default function PricingPage() {
 								Is there a free trial?
 							</h3>
 							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
-								14-day free trial on Starter and Business plans. No credit card required to start.
-								Full access to all features in your plan.
-							</p>
-						</article>
-						<article className="rounded-lg border border-border bg-surface p-6">
-							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
-								What integrations are included?
-							</h3>
-							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
-								Starter includes email and calendar. Business and Enterprise include all 30+
-								integrations including accounting, HR, and recruiting tools.
-							</p>
-						</article>
-						<article className="rounded-lg border border-border bg-surface p-6">
-							<h3 className="m-0 font-display text-base font-bold tracking-[-0.01em]">
-								How long does setup take?
-							</h3>
-							<p className="m-0 mt-2 text-sm leading-6 text-text-secondary">
-								Most teams are live within 15 minutes. Connect your tools, set your policies in
-								plain English, and agents start working immediately.
+								Yes. Starter and Business include a 14-day trial with no credit card.
 							</p>
 						</article>
 						<article className="rounded-lg border border-border bg-surface p-6">
@@ -186,11 +164,9 @@ export default function PricingPage() {
 					<p className="mb-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-accent">
 						Need a custom plan?
 					</p>
-					<h2 className={sectionTitleClass + " text-text-dark"}>
-						Ready to put your agents to work?
-					</h2>
+					<h2 className={`${sectionTitleClass} text-text-dark`}>See the ROI before you scale.</h2>
 					<p className="mx-auto mt-3 max-w-[36rem] text-base leading-7 text-text-dark-secondary">
-						Start your free trial today or talk to our team about enterprise needs.
+						Start free or talk to sales if you need enterprise support.
 					</p>
 					<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
 						<Link href="/signup" className={heroButtonPrimaryClass}>
